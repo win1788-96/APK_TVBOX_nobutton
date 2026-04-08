@@ -1,4 +1,4 @@
-package com.example.bingo
+package tvbox.kj
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -6,7 +6,7 @@ import com.tencent.smtt.sdk.QbSdk
 
 class MainActivity : AppCompatActivity() {
 
-    private val fixedUrl = "https://lotto.auzo.tw/tv/bingoTv/index.php"
+    private val fixedUrl = "https://unabrasively-clothlike-lynn.ngrok-free.dev/tvbox"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

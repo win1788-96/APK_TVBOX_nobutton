@@ -1,4 +1,4 @@
-package com.example.bingo
+package tvbox.kj
 
 import android.app.Activity
 import android.content.pm.ActivityInfo

@@ -4,17 +4,21 @@ plugins {
 }
 
 android {
-    namespace = "com.example.bingo"
+    namespace = "tvbox.kj"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.bingo"
+        applicationId = "tvbox.kj"
         minSdk = 19
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
         
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        
+        val parts = applicationId?.split(".") ?: listOf("", "bingo")
+        val shortName = if (parts.size >= 2) parts[1] else "bingo"
+        manifestPlaceholders["appName"] = shortName
     }
 
     buildTypes {
@@ -44,6 +48,16 @@ android {
             reset()
             include("armeabi-v7a")
             isUniversalApk = false
+        }
+    }
+
+    applicationVariants.all {
+        val variant = this
+        variant.outputs.all {
+            val output = this as com.android.build.gradle.internal.api.BaseVariantOutputImpl
+            val parts = variant.applicationId.split(".")
+            val name = if (parts.size >= 2) parts[1] else variant.applicationId
+            output.outputFileName = "$name.apk"
         }
     }
 }

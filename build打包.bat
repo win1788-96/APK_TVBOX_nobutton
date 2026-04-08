@@ -12,7 +12,9 @@ if %ERRORLEVEL% EQU 0 (
     echo.
     echo ========================================================
     echo  [SUCCESS] APK generated and signed!
-    echo  [APK Path] app\build\outputs\apk\debug\app-armeabi-v7a-debug.apk
+    for /f "delims=" %%i in ('dir /b /s app\build\outputs\apk\debug\*.apk') do (
+        echo  [APK Path] %%i
+    )
     echo ========================================================
 ) else (
     echo.

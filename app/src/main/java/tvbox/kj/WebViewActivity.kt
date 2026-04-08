@@ -1,4 +1,4 @@
-package com.example.bingo
+package tvbox.kj
 
 import android.annotation.SuppressLint
 import android.os.Bundle
