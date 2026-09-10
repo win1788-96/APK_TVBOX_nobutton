@@ -6,7 +6,7 @@ import com.tencent.smtt.sdk.QbSdk
 
 class MainActivity : AppCompatActivity() {
 
-    private val fixedUrl = "https://unabrasively-clothlike-lynn.ngrok-free.dev/tvbox"
+    private val fixedUrl = "https://lotto.auzo.tw/tv/bingoTv/index.php"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
